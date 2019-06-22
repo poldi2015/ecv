@@ -48,7 +48,7 @@ $(OBJ) : $(SRC) $(MAKEDTX)
 		 -doc "doc/ecv.tex" \
 		 -preamble "$(LICENSE_TEXT)" \
 	     ecv
-	echo -e "/endbat/kx\nr patch/msg.txt\n'xm $$\nwq" | ed ecv.ins
+	echo -e "/endbat/kx\nr patch/msg.txt\n'xm $$\nwq" | ed -s -l ecv.ins
 	mv $(notdir $(OBJ)) build/obj
 
 # Build template PDFs
