@@ -1,0 +1,8 @@
+*.dtx
+*.pdf
+*.log
+*.aux
+*.glo
+*.idx
+build/
+dist/

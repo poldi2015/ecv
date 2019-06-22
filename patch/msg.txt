@@ -1,0 +1,13 @@
+\Msg{****************************************************} 
+\Msg{*                                                   } 
+\Msg{* To finish the installation you have to move all   } 
+\Msg{* extracted files into the directory:               } 
+\Msg{*                                                   } 
+\Msg{* tex/latex/ecv                                           } 
+\Msg{*                                                   } 
+\Msg{* beneath the TeX installation (usually             }
+\Msg{* /usr/share/textmf).                               } 
+\Msg{*                                                   } 
+\Msg{* Happy TeXing!                                     } 
+\Msg{*                                                   } 
+\Msg{****************************************************}

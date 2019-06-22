@@ -1,0 +1,77 @@
+              -----------------------------
+              Version 0.3 of the ecv class
+               C.P. Neumann, B. Haberstumpf
+              -----------------------------
+
+This LaTeX provides a simple environment for laying out a
+fancy curriculum vitae with LaTeX. The class is intended
+to be self-contained so it should not be necessary to fiddle
+around with thousand other packages to get a nicely 
+formatted CV.
+
+As this class is created mainly for ourselves it does not
+contain evil low-level TeX magic but instead uses many other
+fancy LaTeX packages that we hope you have already installed.
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.3
+of this license or (at your option) any later version.
+The latest version of this license is in
+  http://www.latex-project.org/lppl.txt
+and version 1.3 or later is part of all distributions of LaTeX
+version 2005/12/01 or later.
+
+Required Packages
+-----------------
+
+In detail the following packages are loaded by the ecv class:
+
+  ifthen
+  geometry
+  longtable
+  pgf
+  paralist
+  helvet
+  color
+  fancyhdr
+  inputenc or selinput
+  fontenc
+  ae
+  aecompl
+  aeguill
+  textcomp
+  url
+  hyperref
+  hyperref
+  babel
+
+These packages can be obtained of course from http://www.ctan.org/.
+
+
+Installation
+------------
+
+After unzipping the package call:
+
+  $ latex ecv.ins
+
+This will be extract some files (ecv.cls, ecvNLS.sty...). Create a
+directory beneath your TeX installation preferably create 
+
+  tex/latex/ecv
+
+and copy all files of the package and the extracted files to that directory.
+
+Call:
+
+  mktexlsr
+
+Templates
+---------
+
+In template.zip document templates for a german and an english CV can be 
+found. Just unzip the template.zip, cd to template and run make to get the
+pdf.
+
+/Bernd Haberstumpf, <poldi@kabatrinker.de>
+/Christoph P. Neumann, <c.p.neumann+ecv@gmail.com>
