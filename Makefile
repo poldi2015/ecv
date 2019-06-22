@@ -18,15 +18,16 @@ default: compile
 
 compile: $(OBJ) $(DOC_PDF) $(TEMPLATE_PDFS)
 
-dist : dist/$(ARCHIVE)
+dist : $(ARCHIVE)
 
-dist/$(ARCHIVE) : $(OBJ) $(DOC_PDF) $(TEMPLATE_PDFS) $(LICENSE)
+$(ARCHIVE) : $(OBJ) $(DOC_PDF) $(TEMPLATE_PDFS) $(LICENSE)
 	mkdir -p build/dist
 	cp -r static/* build/dist
 	cp $(OBJ) $(DOC_PDF) build/dist
 	mkdir -p build/dist/template
 	cp $(TEMPLATE_PDFS) build/dist/template
 	mkdir -p dist
+	cd build/dist; zip -r ../../$@ *
 
 # Extract makedtx.pl
 $(MAKEDTX) : dependencies/$(MAKEDTX_ARCHIVE)
