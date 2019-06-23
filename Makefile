@@ -49,7 +49,7 @@ $(OBJ) : $(SRC) $(MAKEDTX)
 		-preamble "$(LICENSE_TEXT)" \
 		ecv
 	cat ecv.ins
-	echo -e "/endbat/kx\nr patch/msg.txt\n'xm $$\nwq" | ed -s -l ecv.ins
+	echo -e "/endbat/kx\nr patch/msg.txt\n'xm $$\nwq" | ed -v -s -l ecv.ins
 	cat ecv.ins
 	mv $(notdir $(OBJ)) build/obj
 
