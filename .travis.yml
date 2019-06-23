@@ -2,7 +2,7 @@ sudo: required
 dist: xenial
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
-  texlive-fonts-recommended  texlive-latex-recommended texlive-latex-extra texlive-lang-german texlive-lang-french texlive-pictures
+  texlive-fonts-recommended  texlive-latex-recommended texlive-latex-extra texlive-lang-german texlive-lang-french texlive-pictures ed
 script:
 - make dist
 deploy:
