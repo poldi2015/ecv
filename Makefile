@@ -39,16 +39,18 @@ $(MAKEDTX) : dependencies/$(MAKEDTX_ARCHIVE)
 $(OBJ) : $(SRC) $(MAKEDTX)
 	mkdir -p build/obj
 	perl $(MAKEDTX) \
-		 -macrocode ".*" \
-		 -src "($(subst $() $(),|,$(SRC)))=>\1" \
-		 -dir "src" \
-	     -author "$(AUTHORS)" \
-		 -date "2006-$(shell date +%Y)" \
-		 -setambles ".*=>\nopreamble" \
-		 -doc "doc/ecv.tex" \
-		 -preamble "$(LICENSE_TEXT)" \
-	     ecv
+		-macrocode ".*" \
+		-src "($(subst $() $(),|,$(SRC)))=>\1" \
+		-dir "src" \
+		-author "$(AUTHORS)" \
+		-date "2006-$(shell date +%Y)" \
+		-setambles ".*=>\nopreamble" \
+		-doc "doc/ecv.tex" \
+		-preamble "$(LICENSE_TEXT)" \
+		ecv
+	cat ecv.ins
 	echo -e "/endbat/kx\nr patch/msg.txt\n'xm $$\nwq" | ed -s -l ecv.ins
+	cat ecv.ins
 	mv $(notdir $(OBJ)) build/obj
 
 # Build template PDFs
