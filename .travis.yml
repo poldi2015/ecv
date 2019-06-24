@@ -2,19 +2,18 @@ sudo: required
 dist: xenial
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
-  texlive-fonts-recommended  texlive-latex-recommended texlive-latex-extra texlive-lang-german texlive-lang-french texlive-pictures
+  texlive-fonts-recommended  texlive-latex-recommended texlive-latex-extra texlive-lang-german
+  texlive-lang-french texlive-pictures
 script:
 - make dist
 deploy:
   provider: releases
   api_key:
-    secure: u9M3Hb+9ilq6j6EO66pIGi9yqYczAhnovpsN3kqBVKppzJWgGfWtdLnbnoDotbPCcvy6bfgOzT8KIHBJDlsaod3fVtVsawQ3HvqbBosPOaL+aYhNmI5g5VNK+q4mhVrKIVTK5styMKg3Nr7585rbzZz2PbtFYblvtlNbP1MzZsJ2ebszkBkYxsWMrREV5qvjYIpjoondJvSENdmW0wjhlIEnRXn6crbsfUgkhTCgveub0h/TJZNIVMSTDtBsVgw9xoDqrSoc38oOfwoAu7mgf6icFaJhNi3eGRQ2zxLKLzk6KagtbfJHyYH5n4d4xUfoxyW/p0vW2aLMEmsBSYlE7U6b2ACpUsKiFa5w8hnWT3lWyF34amgeupS94R6j46kBX5sV0FTC8r7CVqUKEUErybp4giHAqpC2j2uBHe7Nxk3YGYWkar7YfevP5v+VA/AvHC6/6OhbEer3eHi1iJTN4BXSjK2eQEXR79S9mnXkl4oenK1Y0h9pu1PkRw/GrSH/wQyoO0y+uLNrVYE5Vx2moyyK0FcpO+o50eDY9BtpiRQrU58O3PLgex7c3ns+i1CLW5af5R4uVumxVbYSwfi1Kb/F/vUwpRAxijkLavs9KBqaw7vdtyTwOND3lf5v7RKbaHyzMJZrzKYqKhx6ZhY8VUtKLrKLTW9/KHXGIFl3gjs=
-  file:
-    - dist/ecv.zip
-    - build/doc/ecv.pdf
-    - build/doc/CV-template_de.pdf
-    - build/doc/CV-template_en.pdf
-  skip_cleanup: true
+    secure: QYpb/8F0vtCFqA8iIMuCqXtE6W7TCvC9x5REqWw59bZMXVjWsskNx+ArxrZZFtj/NsLi7bNHgb4ayLeDJd3xrz4KXFq4Kl3EsIuayahfcSJz2be08u3a9Z9cwmAlfJRC80EkDypqS6oVRdGAl1hq/tVsFlwwG42e8VqjRKSvDvP2N+C42DZst17l7Jw9BpjZggvtAIiefOmUJ9863U797c+Cfn2hhq/Rm8Z299A+ww9rZZpl2iG0gJzGvVMGlqw3n+h7Izgpde+OJFmT4Z+NJrk2FNtpnC77+z0UKlPyoafe6rfeCpch7ANtjEtwkUU9x6VNEVNF/EGk466baR7TwJ0ql7hN14wICQINIuqw6XTx5kvrOrDx30wvpF61nwASMzLx5BU3OWHZ55eMK1hcA67Ip1iR6PWlK5oWg/F4/ajA2cJnSLNh0rnSc/SPDME3CnpdLMAeaTLzWefBvosk7n/vqv4R1o31zordWEfePih+7J9zJYQ7W1ngEA24kep0mGePvzaQnBTyX62QK6T7V4TI7QdbEvKuqAtZqcbyKzmNLtGDH12A/8cgqHQ3NZr4J612W+T7KgkTv7EwanAMDbDh+VBPGwNEaBBF/3GN+VgzQzIzu5oQ0tSMk6EzTh46+QJZfFdcnTGhyIKw0dszfKisBlLOH4sAPGS9q8klgSM=
+  file: 
+  - dist/ecv.zip
+  - build/doc/ecv.pdf
+  - static/README
+  - LICENSE.txt
   on:
-    tags: true
     repo: poldi2015/ecv
