@@ -54,7 +54,7 @@ $(OBJ) : $(SRC) $(MAKEDTX)
 # Build template PDFs
 build/doc/%.pdf : static/template/%.tex
 	mkdir -p build/doc
-	cp $< static/template/Makefile static/template/*.eps build/doc
+	cp $< static/template/Makefile static/template/*.png build/doc
 	$(MAKE) -C build/doc $(notdir $@)
 
 # Build Documentation PDF from ecv.dtx

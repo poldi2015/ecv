@@ -4,12 +4,12 @@
 #
 # This file is free software; as a special exception the author
 # gives unlimited permission to copy and/or distribute it, with
-# or without modifications, as long as this notice is 
+# or without modifications, as long as this notice is
 # preserved.
 #
-# This file is distributed in the hope that it will be useful, 
-# but WITHOUT ANY WARRANTY, to the extent permitted by law; 
-# without even the implied warranty of MERCHANTABILITY or 
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law;
+# without even the implied warranty of MERCHANTABILITY or
 # FITNESS FOR A PARTICULAR PURPOSE.
 
 # LANGUAGE: The language to use
@@ -19,7 +19,7 @@ BASENAME	= CV-template_
 # NAME: Basename of the package
 NAME		= $(BASENAME)$(LANGUAGE)
 # PORTTRAIT: The portrait of the writer
-PORTRAIT	= portrait.eps
+PORTRAIT	= portrait.png
 
 # BUILDPATH: Where distribution will be assembled
 BUILDPATH	= build
@@ -52,7 +52,7 @@ all : pdf
 force : fpdf
 
 # forced create a pdf from $(NAME).tex
-fpdf : 
+fpdf :
 	@touch $(TEX)
 	$(MAKE) $(PDF)
 
@@ -72,7 +72,7 @@ viewpdf : pdf
 	@$(MKDIRP) "$(BUILDPATH)"
 	@echo "-- Copy $< to $(BUILDPATH)"
 	@$(CP) "$<" "$(BUILDPATH)"
-	@echo "-- Copying image images/$(PORTRAIT)"
+	@echo "-- Copying image $(IMAGESPATH)/$(PORTRAIT)"
 	@$(CONVERT) -density $(RES)x$(RES) \
 		    -size 945x1417 \
 		    $(IMAGESPATH)/$(PORTRAIT) \
@@ -94,7 +94,7 @@ viewpdf : pdf
 	@$(CP) $(BUILDPATH)/$@ .
 
 images/%.jpg : build/%.jpg
-	
+
 
 # Cleans up this installation
 clean:
