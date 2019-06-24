@@ -5,7 +5,7 @@ before_install:
   texlive-fonts-recommended  texlive-latex-recommended texlive-latex-extra texlive-lang-german
   texlive-lang-french texlive-pictures
 script:
-- sudo sed -i -e 's/domain="coder" rights="none"/domain="coder" rights="read"' /etc/ImageMagick-6/policy.xml
+- sudo sed -i -e 's/domain="coder" rights="none"/domain="coder" rights="read"/' /etc/ImageMagick-6/policy.xml
 - make dist
 deploy:
   provider: releases
