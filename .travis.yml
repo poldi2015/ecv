@@ -10,10 +10,12 @@ deploy:
   provider: releases
   api_key:
     secure: QYpb/8F0vtCFqA8iIMuCqXtE6W7TCvC9x5REqWw59bZMXVjWsskNx+ArxrZZFtj/NsLi7bNHgb4ayLeDJd3xrz4KXFq4Kl3EsIuayahfcSJz2be08u3a9Z9cwmAlfJRC80EkDypqS6oVRdGAl1hq/tVsFlwwG42e8VqjRKSvDvP2N+C42DZst17l7Jw9BpjZggvtAIiefOmUJ9863U797c+Cfn2hhq/Rm8Z299A+ww9rZZpl2iG0gJzGvVMGlqw3n+h7Izgpde+OJFmT4Z+NJrk2FNtpnC77+z0UKlPyoafe6rfeCpch7ANtjEtwkUU9x6VNEVNF/EGk466baR7TwJ0ql7hN14wICQINIuqw6XTx5kvrOrDx30wvpF61nwASMzLx5BU3OWHZ55eMK1hcA67Ip1iR6PWlK5oWg/F4/ajA2cJnSLNh0rnSc/SPDME3CnpdLMAeaTLzWefBvosk7n/vqv4R1o31zordWEfePih+7J9zJYQ7W1ngEA24kep0mGePvzaQnBTyX62QK6T7V4TI7QdbEvKuqAtZqcbyKzmNLtGDH12A/8cgqHQ3NZr4J612W+T7KgkTv7EwanAMDbDh+VBPGwNEaBBF/3GN+VgzQzIzu5oQ0tSMk6EzTh46+QJZfFdcnTGhyIKw0dszfKisBlLOH4sAPGS9q8klgSM=
-  file: 
+  file:
   - dist/ecv.zip
   - build/doc/ecv.pdf
   - static/README
   - LICENSE.txt
+  skip_cleanup: true
   on:
+    tags: true
     repo: poldi2015/ecv
