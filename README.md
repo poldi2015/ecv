@@ -69,6 +69,10 @@ The build environment needs the following Unix tools to be installed:
 
 If you want to contribute fixes, improvements and new ideas please refer to [CONTRIBUTING.md](CONTRIBUTING.md) on how you can contribute.
 
+## History
+
+For nostalgic reasons you can find the original repository still on Sourceforge as [latex-ecv](https://sourceforge.net/projects/latex-ecv/).
+
 ## Contact
 
 * [Bernd (Poldi) Haberstumpf <poldi@thatswing.de>](mailto:poldi@thatswing.de)
