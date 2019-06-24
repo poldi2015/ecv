@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/poldi2015/ecv.svg?branch=master)](https://travis-ci.org/poldi2015/ecv) [![ecv.zip latest release](https://img.shields.io/github/release/poldi2015/ecv.svg?label=ecv.zip)](https://github.com/poldi2015/ecv/releases/latest/download/ecv.zip) [![ecv.pdf latest release](https://img.shields.io/github/release/poldi2015/ecv.svg?label=ecv.pdf)](https://github.com/poldi2015/ecv/releases/latest/download/ecv.pdf)
+
 # ECV - A fancy curriculum vitae with LaTeX
 
 This repository hosts the source code for the [CTAN](https://ctan.org/)package [ECV](https://ctan.org/pkg/ecv).
