@@ -22,8 +22,9 @@
 % \changes{v0.1}{2007/01/06}{Initial version}
 % \changes{v0.2}{2009/08/25}{0.2}
 % \changes{v0.3}{2011/04/18}{0.3}
+% \changes{v0.4}{2019/08/13}{0.4}
 
-\def\fileversion{0.3}
+\def\fileversion{0.4}
 \def\filedate{2011/04/18}
 
 \NeedsTeXFormat{LaTeX2e}
@@ -191,10 +192,10 @@
 % Command to layout the portrait (must be 60mmx40mm)
 \newcommand\ecv@Portrait[1]{%
   %% A frame as placeholder (with  some 1mm inner padding):
-  \pgfrect[stroke]{\pgfxy(6.85,0.65)}{\pgfxy(4.3,-6.3)}
+  \pgfrect[stroke]{\pgfxy(12.61,-0.24)}{\pgfxy(4.3,-6.3)}
   %% Actually a concrete digital image:
   \pgfdeclareimage[interpolate=true,height=60mm,width=40mm]{portrait}{#1}
-  \pgfputat{\pgfxy(6.77,0.5)}{\pgfbox[left,top]{\pgfuseimage{portrait}}}
+  \pgfputat{\pgfxy(12.77,-0.0)}{\pgfbox[left,top]{\pgfuseimage{portrait}}}
 }
 
 % This variable holds the name of the portrait image
@@ -202,16 +203,9 @@
 
 % title with image
 \newcommand{\ecv@Title}{%
-  \ifthenelse{\equal{\ecv@img}{}}{ %
     \ecvLeft{\textsc{\LARGE{\ecvTitle}}%
       \bigskip\bigskip\bigskip%
     } & \tabularnewline %
-  }{ %
-    \ecvLeft{\textsc{\LARGE{\ecvTitle}}%
-      \bigskip\bigskip\bigskip%
-    } & \ecv@Portrait{\ecv@img} %
-    \tabularnewline %
-  } %
 }
 
 
@@ -263,6 +257,8 @@
 
 % Environment that prints title and portrait
 \newenvironment{ecv}{%
+  \ifthenelse{\equal{\ecv@img}{}}{} %
+  { \ecv@Portrait{\ecv@img} } %
   \begin{longtable}{p{.32\linewidth}|p{.68\linewidth}}
   \ecv@Title
 }{%
